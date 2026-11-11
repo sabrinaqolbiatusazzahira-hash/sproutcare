@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SproutCare - IoT Dashboard</title>
+  
+  <!-- Google Fonts & FontAwesome Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="card dashboard-card">
+    <div class="dash-top">
+      <div>
+        <h3>🌱 SproutCare</h3>
+        <p style="font-size: 12px; color: #aaa;">Halo, Selamat Datang!</p>
+      </div>
+      <span class="badge"><i class="fa-solid fa-circle" style="font-size: 8px;"></i> IoT Online</span>
+    </div>
+
+    <div class="grid-sensor">
+      <div class="sensor-card">
+        <h5>Kelembapan Tanah</h5>
+        <div class="val" id="moistureVal">65%</div>
+        <div class="desc">Status: Normal & Subur</div>
+      </div>
+
+      <div class="sensor-card">
+        <h5>Status Pompa Air</h5>
+        <div class="val" id="pumpVal" style="color: #fff;">OFF</div>
+        <div class="desc">Otomatis Aktif</div>
+      </div>
+    </div>
+
+    <div class="info-box">
+      <i class="fa-solid fa-circle-info" style="color: #00ff88;"></i> <b>Info Sistem:</b> Modul ESP8266 terhubung secara real-time. Pompa air akan menyala otomatis jika kelembapan di bawah 30%.
+    </div>
+
+    <button type="button" class="btn-main btn-logout" id="btnLogout">KELUAR SYSTEM</button>
+  </div>
+
+  <script>
+    // Logika tombol keluar / logout kembali ke index.html
+    document.getElementById('btnLogout').addEventListener('click', function() {
+      window.location.href = "index.html";
+    });
+  </script>
+
+</body>
+</html>

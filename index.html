@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SproutCare - Login</title>
+  
+  <!-- Google Fonts & FontAwesome Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="card" id="loginPage">
+    <div class="login-header">
+      <i class="fa-solid fa-seedling"></i>
+      <h2>SproutCare</h2>
+      <p>IoT Soil Monitoring System</p>
+    </div>
+
+    <form id="loginForm">
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Masukkan username" required autocomplete="off">
+      </div>
+
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Masukkan password" required>
+      </div>
+
+      <button type="submit" class="btn-main">MASUK DASHBOARD</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const user = document.getElementById('username').value.trim();
+      const pass = document.getElementById('password').value.trim();
+
+      // Cek kredensial sederhana
+      if (user === "sproutcare" && pass === "12345678910") {
+        // Jika benar, arahkan ke halaman dashboard
+        window.location.href = "dashboard.html";
+      } else {
+        alert("Username atau Password salah!");
+      }
+    });
+  </script>
+
+</body>
+</html>
